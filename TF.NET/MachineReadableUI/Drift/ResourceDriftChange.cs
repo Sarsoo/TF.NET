@@ -12,5 +12,5 @@ public struct ResourceDriftChange
     /// <summary>
     /// the action planned to be taken for the resource. Values: update, delete.
     /// </summary>
-    public DriftAction Action { get; set; }
+    public ResourceAction Action { get; set; }
 }

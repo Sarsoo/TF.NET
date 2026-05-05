@@ -1,5 +1,6 @@
 using CliWrap;
 using CliWrap.Buffered;
+using TF.NET.Command;
 
 namespace TF.NET.Plan;
 
@@ -7,12 +8,10 @@ public static class Plan
 {
     public static async Task Run()
     {
-        var result = await Cli.Wrap("terraform")
-            .WithArguments(["plan", "-json", "-detailed-exitcode"])
-            .WithWorkingDirectory("/Users/andy/dev/infra/terraform/CLOUDFLARE/sas&sam")
-            .WithValidation(CommandResultValidation.None)
-            .ExecuteBufferedAsync();
+        var c = new TerraformCommand("terraform").Configure(x =>
+            x.WithArguments(["plan", "-json", "-detailed-exitcode"])
+                .WithWorkingDirectory("/Users/andy/dev/infra/terraform/CLOUDFLARE/sas&sam"));
 
-        var split = result.StandardOutput.Split(Environment.NewLine);
+        await c.Run();
     }
 }

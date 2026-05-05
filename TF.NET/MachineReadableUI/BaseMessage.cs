@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace TF.NET.MachineReadableUI;
 
-public class BaseMessage
+public struct BaseMessage
 {
     /// <summary>
     /// this is normally "info", but can be "error" or "warn" when showing diagnostics

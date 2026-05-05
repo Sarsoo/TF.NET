@@ -6,12 +6,16 @@ namespace TF.NET.MachineReadableUI.Json;
 
 [JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true)]
 [JsonSerializable(typeof(BaseMessage))]
+[JsonSerializable(typeof(FullMessage))]
+
 [JsonSerializable(typeof(Resource))]
 [JsonSerializable(typeof(ResourceDriftChange))]
-[JsonSerializable(typeof(DriftAction))]
+[JsonSerializable(typeof(ResourceAction))]
+
 [JsonSerializable(typeof(ChangeSummary))]
 [JsonSerializable(typeof(ChangeOperation))]
+[JsonSerializable(typeof(ChangeReason))]
+
 [JsonSerializable(typeof(Hook))]
-[JsonSerializable(typeof(ApplyAction))]
 public partial class MruiContext : JsonSerializerContext
 { }

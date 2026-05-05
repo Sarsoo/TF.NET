@@ -1,10 +1,9 @@
 using System.Text.Json.Serialization;
-using TF.NET.MachineReadableUI.Drift;
 
-namespace TF.NET.MachineReadableUI.Apply;
+namespace TF.NET.MachineReadableUI;
 
-[JsonConverter(typeof(JsonStringEnumConverter<ApplyAction>))]
-public enum ApplyAction
+[JsonConverter(typeof(JsonStringEnumConverter<ResourceAction>))]
+public enum ResourceAction
 {
     [JsonStringEnumMemberName("noop")]
     NoOp,
@@ -17,5 +16,9 @@ public enum ApplyAction
     [JsonStringEnumMemberName("replace")]
     Replace,
     [JsonStringEnumMemberName("delete")]
-    Delete
+    Delete,
+    [JsonStringEnumMemberName("move")]
+    Move,
+    [JsonStringEnumMemberName("import")]
+    Import
 }
