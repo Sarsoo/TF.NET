@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF.NET", "TF.NET\TF.NET.csproj", "{EBFE60BC-E5C0-4619-8088-11C567943306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TF.NET.Test", "TF.NET.Test\TF.NET.Test.csproj", "{36726A9B-BFED-4C44-B50F-4622526FAB9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBFE60BC-E5C0-4619-8088-11C567943306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBFE60BC-E5C0-4619-8088-11C567943306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBFE60BC-E5C0-4619-8088-11C567943306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBFE60BC-E5C0-4619-8088-11C567943306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36726A9B-BFED-4C44-B50F-4622526FAB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36726A9B-BFED-4C44-B50F-4622526FAB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36726A9B-BFED-4C44-B50F-4622526FAB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36726A9B-BFED-4C44-B50F-4622526FAB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
