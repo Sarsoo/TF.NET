@@ -46,4 +46,4 @@ jobs:
         run: dotnet pack
 
       - name: Push
-        run: dotnet nuget push ./TF.NET/bin/Release/TF.NET.0.0.1.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./TF.NET/bin/Release/Sarsoo.TF.NET.0.0.1.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
