@@ -1,0 +1,49 @@
+name: ci
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    name: Build & Unit Test
+    strategy:
+      fail-fast: false
+      matrix:
+        dotnet-version: [ '10.0.x' ]
+
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - name: Install Dependencies
+        run: dotnet restore TF.NET.sln
+      - name: Build
+        run: dotnet build --configuration Debug --no-restore TF.NET.sln
+      - name: Test
+        run: dotnet test --no-restore --verbosity normal TF.NET.sln
+
+  publishNuget:
+    name: Publish Nuget
+    runs-on: ubuntu-latest
+    needs: [ build ] # for ignoring bad builds
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Install Dependencies
+        run: dotnet restore
+
+      - name: Pack
+        run: dotnet pack
+
+      - name: Push
+        run: dotnet nuget push ./TF.NET/bin/Release/TF.NET.1.0.0.nupkg --api-key ${{ secrets.NUGET_TOKEN }} --source https://api.nuget.org/v3/index.json
