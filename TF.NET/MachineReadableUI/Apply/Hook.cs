@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace TF.NET.MachineReadableUI.Apply;
+namespace TF.MachineReadableUI.Apply;
 
 public struct Hook
 {

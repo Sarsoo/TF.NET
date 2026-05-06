@@ -1,9 +1,9 @@
 using System.Text.Json.Serialization;
-using TF.NET.MachineReadableUI.Apply;
-using TF.NET.MachineReadableUI.Drift;
-using TF.NET.MachineReadableUI.Plan;
+using TF.MachineReadableUI.Apply;
+using TF.MachineReadableUI.Drift;
+using TF.MachineReadableUI.Plan;
 
-namespace TF.NET.MachineReadableUI;
+namespace TF.MachineReadableUI;
 
 public struct FullMessage
 {

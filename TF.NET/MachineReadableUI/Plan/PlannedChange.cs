@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace TF.NET.MachineReadableUI.Plan;
+namespace TF.MachineReadableUI.Plan;
 
 /// <summary>
 /// At the end of a plan or before an apply, Terraform will emit a planned_change message for each resource which has changes to apply. This message has an embedded change object with the following keys:

@@ -1,4 +1,4 @@
-namespace TF.NET.MachineReadableUI.Constant;
+namespace TF.MachineReadableUI.Constant;
 
 public static partial class MruiConst
 {

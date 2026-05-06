@@ -1,10 +1,11 @@
 using System.Text.Json.Serialization;
-using TF.NET.MachineReadableUI.Apply;
-using TF.NET.MachineReadableUI.Drift;
+using TF.MachineReadableUI.Apply;
+using TF.MachineReadableUI.Drift;
+using TF.MachineReadableUI.Validate;
 
-namespace TF.NET.MachineReadableUI.Json;
+namespace TF.MachineReadableUI.Json;
 
-[JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true)]
+[JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true, PropertyNamingPolicy = JsonKnownNamingPolicy.SnakeCaseLower)]
 [JsonSerializable(typeof(BaseMessage))]
 [JsonSerializable(typeof(FullMessage))]
 
@@ -17,5 +18,13 @@ namespace TF.NET.MachineReadableUI.Json;
 [JsonSerializable(typeof(ChangeReason))]
 
 [JsonSerializable(typeof(Hook))]
+
+[JsonSerializable(typeof(ValidationOutput))]
+[JsonSerializable(typeof(ValidationDiagnostic))]
+[JsonSerializable(typeof(ValidationDiagnosticRange))]
+[JsonSerializable(typeof(ValidationOutput))]
+[JsonSerializable(typeof(ValidationSnippet))]
+[JsonSerializable(typeof(ValidationValueContext))]
+[JsonSerializable(typeof(SourcePosition))]
 public partial class MruiContext : JsonSerializerContext
 { }

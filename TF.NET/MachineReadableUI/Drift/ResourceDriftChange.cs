@@ -1,4 +1,4 @@
-namespace TF.NET.MachineReadableUI.Drift;
+namespace TF.MachineReadableUI.Drift;
 
 /// <summary>
 /// If drift is detected during planning, Terraform will emit a resource_drift message for each resource which has changed outside of Terraform. This message has an embedded change object with the following keys:

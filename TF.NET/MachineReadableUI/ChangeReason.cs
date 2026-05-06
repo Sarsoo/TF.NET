@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace TF.NET.MachineReadableUI;
+namespace TF.MachineReadableUI;
 
 [JsonConverter(typeof(JsonStringEnumConverter<ChangeReason>))]
 public enum ChangeReason

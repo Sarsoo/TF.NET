@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace TF.NET.MachineReadableUI.Drift;
+namespace TF.MachineReadableUI.Drift;
 
 [JsonConverter(typeof(JsonStringEnumConverter<ChangeOperation>))]
 public enum ChangeOperation
