@@ -19,8 +19,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
       - name: Install Dependencies
-        run: dotnet restore TF.NET.sln
+        run: dotnet restore
       - name: Build
-        run: dotnet build --configuration Debug --no-restore TF.NET.sln
+        run: dotnet build --configuration Debug --no-restore
       - name: Test
-        run: dotnet test --no-restore --verbosity normal TF.NET.sln
+        run: dotnet test --no-restore --verbosity normal
