@@ -47,13 +47,16 @@ public class PlanRepresentation
     /// </summary>
     public bool Errored { get; set; }
 
-    // public __ Configuration { get; set; }
+    /// <summary>
+    /// "configuration" is a representation of the configuration being applied to the
+    /// prior state, using the configuration representation described above.
+    /// </summary>
+    public JsonElement Configuration { get; set; }
 
     /// <summary>
     /// "planned_values" is a description of what is known so far of the outcome in
     /// the standard value representation, with any as-yet-unknown values omitted.
     /// </summary>
-    [JsonPropertyName("planned_values")]
     public ValuesRepresentation PlannedValues { get; set; }
 
     /// <summary>
@@ -61,7 +64,6 @@ public class PlanRepresentation
     /// potentially-unknown attributes. Each value is replaced with "true" or
     /// "false" depending on whether it is known in the proposed plan.
     /// </summary>
-    [JsonPropertyName("proposed_unknown")]
     public ValuesRepresentation ProposedUnknown { get; set; }
 
     /// <summary>
@@ -70,5 +72,40 @@ public class PlanRepresentation
     /// additional fields in later.
     /// </summary>
     public JsonElement Variables { get; set; }
+
+    /// <summary>
+    /// "resource_changes" is a description of the individual change actions that
+    /// Terraform plans to use to move from the prior state to a new state
+    /// matching the configuration.
+    /// </summary>
+    public List<ResourceChange> ResourceChanges { get; set; }
+
+    /// <summary>
+    /// "resource_drift" is a description of the changes Terraform detected
+    /// when it compared the most recent state to the prior saved state.
+    /// </summary>
+    public JsonElement ResourceDrift { get; set; }
+
+    /// <summary>
+    /// "relevant_attributes" lists the sources of all values contributing to
+    /// changes in the plan. You can use "relevant_attributes" to filter
+    /// "resource_drift" and determine which external changes may have affected the
+    /// plan result.
+    /// </summary>
+    public JsonElement RelevantAttributes { get; set; }
+
+    /// <summary>
+    /// "output_changes" describes the planned changes to the output values of the
+    /// root module.
+    /// </summary>
+    public JsonElement OutputChanges { get; set; }
+
+    /// <summary>
+    /// "checks" describes the partial results for any checkable objects, such as
+    /// resources with postconditions, with as much information as Terraform can
+    /// recognize at plan time. Some objects will have status "unknown" to
+    /// indicate that their status will only be determined after applying the plan.
+    /// </summary>
+    public JsonElement Checks { get; set; }
 
 }
