@@ -13,6 +13,7 @@ public class ResourceRepresentation
     public string Provider { get; set; }
     public int SchemaVersion { get; set; }
 
-    public string Values { get; set; }
-    public Dictionary<string, bool> SensitiveValues { get; set; }
+    // commented out while serilialisation doesn't work
+    // public string Values { get; set; }
+    // public Dictionary<string, bool> SensitiveValues { get; set; }
 }
