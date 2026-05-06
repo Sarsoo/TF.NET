@@ -3,11 +3,11 @@ using TF.JsonOutput.State;
 
 namespace TF.Command;
 
-public class Show
+public class ShowState
 {
     private readonly TerraformCommand<StateRepresentation> _command;
 
-    public Show(string executable, string workingDirectory)
+    public ShowState(string executable, string workingDirectory)
     {
         _command = new TerraformCommand<StateRepresentation>(executable, JsonOutputContext.Default.StateRepresentation)
             .Configure(x =>

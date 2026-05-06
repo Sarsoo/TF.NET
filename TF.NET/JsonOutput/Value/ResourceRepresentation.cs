@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace TF.JsonOutput.Value;
@@ -14,6 +15,6 @@ public class ResourceRepresentation
     public int SchemaVersion { get; set; }
 
     // commented out while serilialisation doesn't work
-    // public string Values { get; set; }
-    // public Dictionary<string, bool> SensitiveValues { get; set; }
+    public JsonElement Values { get; set; }
+    public JsonElement SensitiveValues { get; set; }
 }

@@ -3,8 +3,6 @@ using System.Text.Json.Serialization.Metadata;
 using System.Threading.Channels;
 using CliWrap;
 using CliWrap.EventStream;
-using TF.MachineReadableUI;
-using TF.MachineReadableUI.Json;
 
 namespace TF.Command;
 

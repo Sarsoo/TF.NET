@@ -1,3 +1,4 @@
+using System.Text.Json;
 using System.Text.Json.Serialization;
 using TF.JsonOutput.State;
 using TF.JsonOutput.Value;
@@ -68,6 +69,6 @@ public class PlanRepresentation
     /// plan. This is structured as a map similar to the output map so we can add
     /// additional fields in later.
     /// </summary>
-    public Dictionary<string, string> Variables { get; set; }
+    public JsonElement Variables { get; set; }
 
 }

@@ -18,9 +18,4 @@
       <PackageReference Include="CliWrap" Version="3.10.1" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Extensions\" />
-      <Folder Include="Plan\" />
-    </ItemGroup>
-
 </Project>
