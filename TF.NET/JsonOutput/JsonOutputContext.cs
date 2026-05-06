@@ -16,6 +16,7 @@ namespace TF.JsonOutput;
 
 [JsonSerializable(typeof(PlanRepresentation))]
 [JsonSerializable(typeof(ResourceChange))]
+[JsonSerializable(typeof(ResourceAttributeReference))]
 [JsonSerializable(typeof(ActionReason))]
 
 [JsonSerializable(typeof(ChangeRepresentation))]

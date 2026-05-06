@@ -84,7 +84,7 @@ public class PlanRepresentation
     /// "resource_drift" is a description of the changes Terraform detected
     /// when it compared the most recent state to the prior saved state.
     /// </summary>
-    public JsonElement ResourceDrift { get; set; }
+    public List<ResourceChange>? ResourceDrift { get; set; }
 
     /// <summary>
     /// "relevant_attributes" lists the sources of all values contributing to
@@ -92,7 +92,7 @@ public class PlanRepresentation
     /// "resource_drift" and determine which external changes may have affected the
     /// plan result.
     /// </summary>
-    public JsonElement RelevantAttributes { get; set; }
+    public List<ResourceAttributeReference>? RelevantAttributes { get; set; }
 
     /// <summary>
     /// "output_changes" describes the planned changes to the output values of the
