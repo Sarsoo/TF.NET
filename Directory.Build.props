@@ -1,9 +1,9 @@
 <Project>
     <PropertyGroup>
         <Authors>Andy Pack</Authors>
-        <PackageProjectUrl>https://github.com/Sarsoo/TF.NET</PackageProjectUrl>
-        <PackageLicenseUrl>https://mit-license.org/</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/Sarsoo/TF.NET</RepositoryUrl>
-        <Version>0.0.2</Version>
+        <PackageProjectUrl>https://github.com/Sarsoo/Sarsoo.Terraform</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/Sarsoo/Sarsoo.Terraform</RepositoryUrl>
+        <Version>0.0.3</Version>
     </PropertyGroup>
 </Project>
