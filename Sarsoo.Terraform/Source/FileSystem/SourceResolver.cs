@@ -1,4 +1,4 @@
-namespace Sarsoo.Terraform.FileSystem;
+namespace Sarsoo.Terraform.Source.FileSystem;
 
 public static class SourceResolver
 {

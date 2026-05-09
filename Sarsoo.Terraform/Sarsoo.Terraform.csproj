@@ -21,7 +21,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Source\Dependency\" />
+      <ProjectReference Include="..\..\TerraformDotnet\src\TerraformDotnet.Hcl\TerraformDotnet.Hcl.csproj" />
+      <ProjectReference Include="..\..\TerraformDotnet\src\TerraformDotnet\TerraformDotnet.csproj" />
     </ItemGroup>
 
 </Project>
