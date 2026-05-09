@@ -1,0 +1,3 @@
+[submodule "TerraformDotnet"]
+	path = TerraformDotnet
+	url = git@github.com:Sarsoo/TerraformDotnet.git
